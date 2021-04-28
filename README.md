@@ -21,4 +21,6 @@ Diese Lösung hat aber eigentlich nur Nachteile... Leistungsschütze-/Schalter s
 
 ## Elektronik einspannen
 
-Der Kühlschrank hat ein Bedienpanel, das üblicherweise nicht zugänglich ist, weil die Tür geschlossen ist.
+Der Kühlschrank hat ein Bedienpanel, das üblicherweise nicht zugänglich ist, weil die Tür geschlossen ist. An die Elektronik kommt man aber dann doch recht leicht ran, weil diese nicht von der Dichtung eingeschlossen ist, d.h. sie ist nicht im Kühlraum.
+
+Einen Controller zum Steuern (z.B. über WLAN) braucht man eh (s.o.), es liegt also nahe, diesem auch Bedienaufgaben zu übertragen. Also eine Lösung gefunden werden, wie der Controller die Knöpfe bedienen kann und die aktuellen Einstellungen lesen kann.
