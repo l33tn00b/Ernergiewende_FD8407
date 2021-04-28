@@ -48,12 +48,14 @@ Erstmal ein Blick auf die Platine
 Oberseite, dem Nutzer zugewandt wenn er in den Kühlschrank schaut:
 ![Platine Oberseite](platine_top.jpg)
 
-Unterseite:
-![Platine Unterseite](platine_bot.jpg)
-
 Ohhh... es gibt nen Controller. Der ist allerdings Siemens-Spezial. Nichts, was man irgendwo sonst findet. Custom silicon, wie es aussieht. Doof. Also scheidet eine alternative Firmware wohl aus. Aber es gibt einen (seriellen?) Port zu Wartungszwecken (sauber abgesichert mit Dioden und Serienwiderständen, das waren noch Zeiten...) an der linken Seite der Platine (von oben gesehen). Der spuckt allerdings nichts aus. Und auch ein Aktivieren des Service-Modus (Super-Taste beim Einschalten drücken) führt nicht zu Aktivität auf dem Port. Wartet wohl auf ein Magic Packet o.ä. Schade...
 
 Tja, da muss dann wohl der Hardware-Weg beschritten werden mit einer Bediensimulation... Ich will ja nicht immer wenn die Sonne scheint am Kühlschrank rumtippen müssen. (Die Variante "wir machen mal ne neue Platine" lasse ich bewusst außen vor, da ich nun wirklich nicht die Zeit und Lust dafür habe.)
+
+Unterseite:
+![Platine Unterseite](platine_bot.jpg)
+
+
 
 Bei der Super-Taste sagt die Bedienungsanleitung, dass sich die Funktion irgendwann selbst wieder deaktiviert, wenn das neu eingelegte Zeugs im TK-Bereich durchgefroren ist. Ich tippe auf eine Auswertung des Temperaturgradienten, um den Punkt mitzukriegen. Anderenfalls deaktiviert sie sich spätestens nach einem Tag wieder. Hm. Kein neues Zeug im TK-Bereich führt wahrscheinlich dazu, dass sich die Funktion ziemlich bald wieder deaktiviert. Man kann es aber mal probieren.   
 - Vorteil: Zeug im Kühlbereich friert nicht ein, die Temperatur dort bleibt gleich. Schnell zu aktivieren, ein Taster mit Optokoppler brücken. Auswertung ob aktiviert oder nicht ist auch einfach, da es eine LED dafür gibt. Lässt sich ebenfalls mit Optokoppler gut auswerten. Ein Input, ein Output am Controller. Da reicht was echt kleines (z.B. ESP-01). Optokoppler sind Cent-Bausteine. Plus einen Vorwiderstand für den Optokopper. EspEasy auf den Controller, das wars. 
