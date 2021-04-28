@@ -7,7 +7,7 @@ Da hat man einen Carport und Platz für Solarzellen. Nun gut, prima für die Ele
 
 Aber halt, wir haben ja einen Speicher im Haus... einen Kältespeicher. Nein, sogar zwei. Kühlschrank und Kühltruhe. Jetzt müsste man den nur einschalten, wenn ein Überschuss da ist und ausschalten, wenn beispielsweise die Lebensmittel zu doll gefrieren oder die Karre wieder da ist und geladen werden will.
 
-Damit wird gekühlt, wenn ein Leistungsüberschuss da ist. Und dann wird es langsam wieder wärmer (in Richtung der üblichen eingestellten Temperatur) bis irgendwann der "normale" Betrieb wieder erreicht wird. 
+Damit wird gekühlt, wenn ein Leistungsüberschuss da ist. Und dann wird wenn die Sonne weg ist wieder in den Normalbetrieb gewechselt. Es wird dann langsam wieder wärmer (in Richtung der üblichen eingestellten Temperatur). Klar, dass durch eine größere Temperaturdifferenz zwischen Innenraum des Kühlschranks und Außen auch größere Verluste gibt. Aber so schlecht ist die Isolation nun auch wieder nicht und bevor ich den Strom quasi der Allgemeinheit schenke (sieben Cent Einspeisevergütung pro kWh) oder fürs Speichern draufzahle....
 
 Doof nur, dass der Kühlschrank absolut nicht intelligent ist. Das Ding ist nun einmal knapp zwanzig Jahre alt, tut aber noch prima seinen Dienst. Zum Wegschmeißen zu schade und abgeschrieben ist er auch. Solange er läuft gehts nicht billiger... Also muss das Ding irgendwie aufgeschlaut werden. 
 
@@ -21,6 +21,9 @@ Diese Lösung hat aber eigentlich nur Nachteile... Leistungsschütze-/Schalter s
 
 ## Elektronik einspannen
 
-Der Kühlschrank hat ein Bedienpanel, das üblicherweise nicht zugänglich ist, weil die Tür geschlossen ist. An die Elektronik kommt man aber dann doch recht leicht ran, weil diese nicht von der Dichtung eingeschlossen ist, d.h. sie ist nicht im Kühlraum.
+Der Kühlschrank hat ein Bedienpanel, das üblicherweise nicht zugänglich ist, weil die Tür geschlossen ist. An die Elektronik kommt man aber dann doch recht leicht ran, weil diese nicht von der Dichtung eingeschlossen ist, d.h. sie ist nicht im Kühlraum. Also keine Undichtigkeiten durch Kabel, die nach draußen geführt werden müssen (WLAN Empfang im Kühlschrank ist eher schlecht...).
 
-Einen Controller zum Steuern (z.B. über WLAN) braucht man eh (s.o.), es liegt also nahe, diesem auch Bedienaufgaben zu übertragen. Also eine Lösung gefunden werden, wie der Controller die Knöpfe bedienen kann und die aktuellen Einstellungen lesen kann.
+Einen Controller zum Steuern (z.B. über WLAN) braucht man eh (s.o.), es liegt also nahe, diesem auch Bedienaufgaben zu übertragen. Also muss eine Lösung gefunden werden, wie der Controller die Knöpfe bedienen kann und die aktuellen Einstellungen lesen kann.
+
+# Lösung durch Elektronik einspannen
+
