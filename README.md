@@ -13,10 +13,13 @@ Doof nur, dass der Kühlschrank absolut nicht intelligent ist. Das Ding ist nun 
 
 # Das Gerät
 
-Die beschrieben ist die Kiste schon etwas älter. Und ohne viel drumherum ist hier ein Bild der Steuereinheit, die oben am Kühlschrank sitzt:  
+Die beschrieben ist die Kiste schon etwas älter. Gefreut habe ich mich über das altmodische "c" bei den Electrogeräten auf dem Typschild:  
+![Bild Typschild](typschild.jpg)
+
+Und ohne viel drumherum ist hier ein Bild der Steuereinheit, die oben am Kühlschrank sitzt:  
 ![Bild Bedieneinheit](platine_in_gehaeuse.jpg)
 
-Zu erkennen sind verschiedene Bedientaster, eine Siebensegmentanzeige, LEDs und der Hauptschalter.
+Zu erkennen sind verschiedene Bedientaster, eine Siebensegmentanzeige, LEDs und der Hauptschalter. Sonst gibt es noch den Temperatursensor, der im Innenraum rechts sitzt und den Türsensor, der durch das Loch am rechten Rand der Bedieneinheit ragt. 
 
 # Lösungsmöglichkeiten
 
@@ -34,3 +37,6 @@ Einen Controller zum Steuern (z.B. über WLAN) braucht man eh (s.o.), es liegt a
 
 # Lösung durch Elektronik einspannen
 
+Tja.. was brauchts dafür? Und wie geht man vor?
+
+- Der Kühlschrank hat eine "Super"-Taste. Diese aktiviert für eine gewisse Zeit eine Dauer-Tiefkühlfunktion 
