@@ -70,4 +70,10 @@ Etwas mehr Einflussmöglickeiten hat man mit der getrennten Einstellung von Küh
 - Vorteil: Getrennte Regelmöglichkeiten für Kühl- und Gefrierbereich. Genaue Einstellung der Temperatur.
 - Nachteil: Der Taster zur Temperatureinstellung geht zyklisch durch die Temperatur. Da muss man schon höllisch aufpassen, dass man da nicht außer Tritt gerät mit den Einstellungen. Also muss die Siebensegmentanzeige ausgewertet werden. Und ggfs. noch die LED daneben (ändert sich, je nach, ob Freezer oder Cooler Temperatur eingestellt/angezeigt wird). Uff. Das macht schonmal mindestens sieben Optokoppler für eine Siebensegmentanzeige (naja, Cent...) aber braucht auch ordentlich Platz (WAF, der Kühlschrank soll ja nicht allzu sehr verbastelt aussehen ;) ).
 
+# Fazit:
 
+Als Quick Fix tut es wohl erstmal die Super-Taste. Dazu reicht auch ein Optokoppler, da die Stromaufnahme ja sowieso mit einem sogenannten Smart Meter (SDM630) gemessen wird. Da sieht man die Zyklen vom Kühlschrank (von 00:00 bis 08:30). Danach sind die weg, weil die E-Karre bei ausreichendem Sonnenschein zum Laden geschaltet wurde. Ab 14:30 hört die Ladung auf, dann gehts rund mit dem Cos Phi **g** (es waren auch Leute zu Hause, sonst wäre die Karre ja nicht da gewesen)...
+
+![Cos Phi der Phase, auf der der Kühlschrank hängt](cos_phi_l2.png)
+
+![Ladeleistung go-E Wallbox](go_e_ladeleistung.png)
