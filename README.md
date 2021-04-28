@@ -3,6 +3,8 @@ Meine kleine Enwegiewende mit Kühlschrank
 
 # Motivation
 
+Vorsicht Netzspannung!  
+
 Da hat man einen Carport und Platz für Solarzellen. Nun gut, prima für die Elektrokarre. Aber halt, die steht ja wenn die Sonne scheint auf dem Parkplatz auf Arbeit... Also hat sich die Industrie ausgedacht, dass man ja einen teuren Batteriespeicher kaufen kann. Die Kosten kriegt man nur seeehr selten wieder rein. Momentan ist das eher noch eine ideologisch motivierte Kaufentscheidung.
 
 Aber halt, wir haben ja einen Speicher im Haus... einen Kältespeicher. Nein, sogar zwei. Kühlschrank und Kühltruhe. Jetzt müsste man den nur einschalten, wenn ein Überschuss da ist und ausschalten, wenn beispielsweise die Lebensmittel zu doll gefrieren oder die Karre wieder da ist und geladen werden will.
@@ -52,10 +54,12 @@ Ohhh... es gibt nen Controller. Der ist allerdings Siemens-Spezial. Nichts, was 
 
 Tja, da muss dann wohl der Hardware-Weg beschritten werden mit einer Bediensimulation... Ich will ja nicht immer wenn die Sonne scheint am Kühlschrank rumtippen müssen. (Die Variante "wir machen mal ne neue Platine" lasse ich bewusst außen vor, da ich nun wirklich nicht die Zeit und Lust dafür habe.)
 
+Sonst finden sich noch allerlei (kleine) Transistoren, ein Darlington-Treiber (ULN2004) für die Siebensegmentanzeige, ein EEPROM, ein (Negativ-)Spannungsregler für -5V und Hühnerfutter... 
+
 Unterseite:
 ![Platine Unterseite](platine_bot.jpg)
 
-
+Stecker 2,54mm Raster zur Anbindung an die Leistungselektronik und die Sensoren. Vorsicht: der weiße Draht im achtpoligen Stecker führt Netzspannung (Türschalter). Um unnötige spannende (haha) Momente zu vermeiden rate ich zu "Finger weg..." und entsprechenden Schutzmaßnahmen.
 
 Bei der Super-Taste sagt die Bedienungsanleitung, dass sich die Funktion irgendwann selbst wieder deaktiviert, wenn das neu eingelegte Zeugs im TK-Bereich durchgefroren ist. Ich tippe auf eine Auswertung des Temperaturgradienten, um den Punkt mitzukriegen. Anderenfalls deaktiviert sie sich spätestens nach einem Tag wieder. Hm. Kein neues Zeug im TK-Bereich führt wahrscheinlich dazu, dass sich die Funktion ziemlich bald wieder deaktiviert. Man kann es aber mal probieren.   
 - Vorteil: Zeug im Kühlbereich friert nicht ein, die Temperatur dort bleibt gleich. Schnell zu aktivieren, ein Taster mit Optokoppler brücken. Auswertung ob aktiviert oder nicht ist auch einfach, da es eine LED dafür gibt. Lässt sich ebenfalls mit Optokoppler gut auswerten. Ein Input, ein Output am Controller. Da reicht was echt kleines (z.B. ESP-01). Optokoppler sind Cent-Bausteine. Plus einen Vorwiderstand für den Optokopper. EspEasy auf den Controller, das wars. 
@@ -64,4 +68,6 @@ Bei der Super-Taste sagt die Bedienungsanleitung, dass sich die Funktion irgendw
 
 Etwas mehr Einflussmöglickeiten hat man mit der getrennten Einstellung von Kühl- und Gefriertemperatur. 
 - Vorteil: Getrennte Regelmöglichkeiten für Kühl- und Gefrierbereich. Genaue Einstellung der Temperatur.
-- Nachteil: Der Taster zur Temperatureinstellung geht zyklisch durch die Temperatur. Da muss man schon höllisch aufpassen, dass man da nicht außer Tritt gerät mit den Einstellungen.
+- Nachteil: Der Taster zur Temperatureinstellung geht zyklisch durch die Temperatur. Da muss man schon höllisch aufpassen, dass man da nicht außer Tritt gerät mit den Einstellungen. Also muss die Siebensegmentanzeige ausgewertet werden. Und ggfs. noch die LED daneben (ändert sich, je nach, ob Freezer oder Cooler Temperatur eingestellt/angezeigt wird). Uff. Das macht schonmal mindestens sieben Optokoppler für eine Siebensegmentanzeige (naja, Cent...) aber braucht auch ordentlich Platz (WAF, der Kühlschrank soll ja nicht allzu sehr verbastelt aussehen ;) ).
+
+
