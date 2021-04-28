@@ -72,8 +72,24 @@ Etwas mehr Einflussmöglickeiten hat man mit der getrennten Einstellung von Küh
 
 # Fazit:
 
-Als Quick Fix tut es wohl erstmal die Super-Taste. Dazu reicht auch ein Optokoppler, da die Stromaufnahme ja sowieso mit einem sogenannten Smart Meter (SDM630) gemessen wird. Da sieht man die Zyklen vom Kühlschrank (von 00:00 bis 08:30). Danach sind die weg, weil die E-Karre bei ausreichendem Sonnenschein zum Laden geschaltet wurde. Ab 14:30 hört die Ladung auf, dann gehts rund mit dem Cos Phi **g** (es waren auch Leute zu Hause, sonst wäre die Karre ja nicht da gewesen)...
+Als Quick Fix tut es wohl erstmal die Super-Taste. Dazu reicht auch ein Optokoppler, da die Stromaufnahme ja sowieso mit einem sogenannten Smart Meter (SDM630) gemessen wird. Da sieht man die Zyklen vom Kühlschrank (von 00:00 bis 08:30). Danach sind die weg, weil die E-Karre bei ausreichendem Sonnenschein zum Laden geschaltet wurde. Ab 14:30 hört die Ladung auf (Karre voll), dann gehts rund mit dem Cos Phi (es waren auch Leute zu Hause, sonst wäre die Karre ja nicht da gewesen)...
 
 ![Cos Phi der Phase, auf der der Kühlschrank hängt](cos_phi_l2.png)
 
 ![Ladeleistung go-E Wallbox](go_e_ladeleistung.png)
+
+
+# Bonus
+
+Weil ich es eh' gemacht habe kommt hier noch etwas Doku zur Siebensegmentanzeige. Vorweg: Die beiden Ziffern werden im  Multiplex angesteuert. Das spart Leitungen vom Controller. Datenblatt zur Anzeige konnte ich keines finden, also war Messen angesagt. Deswegen sind die Bezeichnungen der Pins auch (etwas, hüstel) unorthodox. Der Multiplex funktioniert stumpf über die Auswahl der Anode. Wenn dort Spannung anliegt, werden die Segmente durch den ULN2004 in Richtung Masse (oder was immer das auf der Platine so ist, Vorsicht... ) geschaltet. Die zwei Anoden werden also über zwei Transistoren abwechselnd mit Spannung versorgt und dann werden einfach die gewünschten Segmente ausgewählt. Also nix mit extra Pin für die Auswahl der Ziffer. Das erklärt auch, warum die Anzeige (nur) neun (2x Anode, 7x Segment) statt zehn (1x Anode, 2x Mux-Pin zur Auswahl der Ziffer, 7x Segment) Pins hat.
+
+Pinout am uC:
+- uc_23: Uln_in7
+- uc_24: Uln_in6
+- uc_25: Uln_in5
+- uc_26: Uln_in4
+- uc_27: Uln_in3
+- uc_28: Uln_in2
+- uc_29: Uln_in1
+- uc_35: Anode Zehnerstelle ("b") via Transistortreiber
+- uc_37: Anode Einerstelle ("e") via Transistortreiber
