@@ -7,9 +7,11 @@ Da hat man einen Carport und Platz für Solarzellen. Nun gut, prima für die Ele
 
 Aber halt, wir haben ja einen Speicher im Haus... einen Kältespeicher. Nein, sogar zwei. Kühlschrank und Kühltruhe. Jetzt müsste man den nur einschalten, wenn ein Überschuss da ist und ausschalten, wenn beispielsweise die Lebensmittel zu doll gefrieren oder die Karre wieder da ist und geladen werden will.
 
-Damit wird gekühlt, wenn ein Leistungsüberschuss da ist. Und dann wird wenn die Sonne weg ist wieder in den Normalbetrieb gewechselt. Es wird dann langsam wieder wärmer (in Richtung der üblichen eingestellten Temperatur). Klar, dass durch eine größere Temperaturdifferenz zwischen Innenraum des Kühlschranks und Außen auch größere Verluste gibt. Aber so schlecht ist die Isolation nun auch wieder nicht und bevor ich den Strom quasi der Allgemeinheit schenke (sieben Cent Einspeisevergütung pro kWh) oder fürs Speichern draufzahle.... Laut [https://media3.bsh-group.com/Documents/eudatasheet/de-LU/KI26E440.pdf](Datenblatt) ist die Lagerzeit bei Störungen 18h. 
+Damit wird gekühlt, wenn ein Leistungsüberschuss da ist. Und dann wird wenn die Sonne weg ist wieder in den Normalbetrieb gewechselt. Es wird dann langsam wieder wärmer (in Richtung der üblichen eingestellten Temperatur). Klar, dass durch eine größere Temperaturdifferenz zwischen Innenraum des Kühlschranks und Außen auch größere Verluste gibt. Aber so schlecht ist die Isolation nun auch wieder nicht und bevor ich den Strom quasi der Allgemeinheit schenke (sieben Cent Einspeisevergütung pro kWh) oder fürs Speichern draufzahle.... Laut [Datenblatt](https://media3.bsh-group.com/Documents/eudatasheet/de-LU/KI26E440.pdf) ist die Lagerzeit bei Störungen 18h.
 
 Doof nur, dass der Kühlschrank absolut nicht intelligent ist. Das Ding ist nun einmal knapp zwanzig Jahre alt, tut aber noch prima seinen Dienst. Zum Wegschmeißen zu schade und abgeschrieben ist er auch. Solange er läuft gehts nicht billiger... Also muss das Ding irgendwie aufgeschlaut werden. 
+
+Garantie gibt's eh keine mehr. Also hält sich die Scham in Grenzen. Auf geht's :) Als Elektroingenieur gilt hier das Pippi-Langstrumpf-Prinzip: Ich mache mir die Welt, widdewiesiemirgefällt.
 
 # Das Gerät
 
@@ -19,7 +21,7 @@ Die beschrieben ist die Kiste schon etwas älter. Gefreut habe ich mich über da
 Und ohne viel drumherum ist hier ein Bild der Steuereinheit, die oben am Kühlschrank sitzt:  
 ![Bild Bedieneinheit](platine_in_gehaeuse.jpg)
 
-Zu erkennen sind verschiedene Bedientaster, eine Siebensegmentanzeige, LEDs und der Hauptschalter. Sonst gibt es noch den Temperatursensor, der im Innenraum rechts sitzt und den Türsensor, der durch das Loch am rechten Rand der Bedieneinheit ragt. 
+Zu erkennen sind verschiedene Bedientaster, eine Siebensegmentanzeige, LEDs und der Hauptschalter. Sonst gibt es noch die Temperatursensoren (NTC), die im Innenraum sitzen und den Türsensor, der durch das Loch am rechten Rand der Bedieneinheit ragt. 
 
 # Lösungsmöglichkeiten
 
@@ -39,4 +41,25 @@ Einen Controller zum Steuern (z.B. über WLAN) braucht man eh (s.o.), es liegt a
 
 Tja.. was brauchts dafür? Und wie geht man vor?
 
-- Der Kühlschrank hat eine "Super"-Taste. Diese aktiviert für eine gewisse Zeit eine Dauer-Tiefkühlfunktion 
+- Der Kühlschrank hat eine "Super"-Taste. Diese aktiviert für eine gewisse Zeit eine Dauer-Tiefkühlfunktion.  
+- Die Solltemperaturen für den Kühl- und Gefrierbereich können getrennt eingestellt werden.
+
+Erstmal ein Blick auf die Platine
+Oberseite, dem Nutzer zugewandt wenn er in den Kühlschrank schaut:
+![Platine Oberseite](platine_top.jpg)
+
+Unterseite:
+![Platine Unterseite](platine_bot.jpg)
+
+Ohhh... es gibt nen Controller. Der ist allerdings Siemens-Spezial. Nichts, was man irgendwo sonst findet. Custom silicon, wie es aussieht. Doof. Also scheidet eine alternative Firmware wohl aus. Aber es gibt einen (seriellen?) Port zu Wartungszwecken (sauber abgesichert mit Dioden und Serienwiderständen, das waren noch Zeiten...) an der linken Seite der Platine (von oben gesehen). Der spuckt allerdings nichts aus. Und auch ein Aktivieren des Service-Modus (Super-Taste beim Einschalten drücken) führt nicht zu Aktivität auf dem Port. Wartet wohl auf ein Magic Packet o.ä. Schade...
+
+Tja, da muss dann wohl der Hardware-Weg beschritten werden mit einer Bediensimulation... Ich will ja nicht immer wenn die Sonne scheint am Kühlschrank rumtippen müssen. (Die Variante "wir machen mal ne neue Platine" lasse ich bewusst außen vor, da ich nun wirklich nicht die Zeit und Lust dafür habe.)
+
+Bei der Super-Taste sagt die Bedienungsanleitung, dass sich die Funktion irgendwann selbst wieder deaktiviert, wenn das neu eingelegte Zeugs im TK-Bereich durchgefroren ist. Ich tippe auf eine Auswertung des Temperaturgradienten, um den Punkt mitzukriegen. Anderenfalls deaktiviert sie sich spätestens nach einem Tag wieder. Hm. Kein neues Zeug im TK-Bereich führt wahrscheinlich dazu, dass sich die Funktion ziemlich bald wieder deaktiviert. Man kann es aber mal probieren.   
+- Vorteil: Zeug im Kühlbereich friert nicht ein, die Temperatur dort bleibt gleich. Schnell zu aktivieren, ein Taster mit Optokoppler brücken. Auswertung ob aktiviert oder nicht ist auch einfach, da es eine LED dafür gibt. Lässt sich ebenfalls mit Optokoppler gut auswerten. Ein Input, ein Output am Controller. Da reicht was echt kleines (z.B. ESP-01). Optokoppler sind Cent-Bausteine. Plus einen Vorwiderstand für den Optokopper. EspEasy auf den Controller, das wars. 
+- Nachteil: Siehe oben, die Funktion deaktiviert sich ggfs. selbst und kann dann ggfs. auch nicht wieder aktiviert werden. Auswertung bei geschlossener Tür schwierig, da die LED ausgeschaltet wird wenn die Tür zu ist.
+
+
+Etwas mehr Einflussmöglickeiten hat man mit der getrennten Einstellung von Kühl- und Gefriertemperatur. 
+- Vorteil: Getrennte Regelmöglichkeiten für Kühl- und Gefrierbereich. Genaue Einstellung der Temperatur.
+- Nachteil: Der Taster zur Temperatureinstellung geht zyklisch durch die Temperatur. Da muss man schon höllisch aufpassen, dass man da nicht außer Tritt gerät mit den Einstellungen.
