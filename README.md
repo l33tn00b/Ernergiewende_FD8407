@@ -11,6 +11,13 @@ Damit wird gekühlt, wenn ein Leistungsüberschuss da ist. Und dann wird wenn di
 
 Doof nur, dass der Kühlschrank absolut nicht intelligent ist. Das Ding ist nun einmal knapp zwanzig Jahre alt, tut aber noch prima seinen Dienst. Zum Wegschmeißen zu schade und abgeschrieben ist er auch. Solange er läuft gehts nicht billiger... Also muss das Ding irgendwie aufgeschlaut werden. 
 
+# Das Gerät
+
+Die beschrieben ist die Kiste schon etwas älter. Und ohne viel drumherum ist hier ein Bild der Steuereinheit, die oben am Kühlschrank sitzt:  
+![Bild Bedieneinheit](platine_in_gehaeuse.jpg)
+
+Zu erkennen sind verschiedene Bedientaster, eine Siebensegmentanzeige, LEDs und der Hauptschalter.
+
 # Lösungsmöglichkeiten
 
 ## Kompressor manuell schalten
