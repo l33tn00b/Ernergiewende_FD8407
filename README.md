@@ -139,4 +139,64 @@ Segmentation fault (core dumped)
  - http://homepages.hs-bremen.de/~jbredereke/en/software/xilinx-docker/index.html
 
 
- 
+ Mit etwas quetschen kriege ich nun ein schönes Ergebnis :)  
+ ```
+ ******************************  Device Pin Out *****************************
+
+Device : XC9536-15-PC44
+
+
+   --------------------------------  
+  /6  5  4  3  2  1  44 43 42 41 40 \
+ | 7                             39 | 
+ | 8                             38 | 
+ | 9                             37 | 
+ | 10                            36 | 
+ | 11        XC9536-15-PC44      35 | 
+ | 12                            34 | 
+ | 13                            33 | 
+ | 14                            32 | 
+ | 15                            31 | 
+ | 16                            30 | 
+ | 17                            29 | 
+ \ 18 19 20 21 22 23 24 25 26 27 28 /
+   --------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 S7<3>                            23 GND                           
+  2 S7<4>                            24 BCDOut<1>                     
+  3 S7<5>                            25 BCDOut<2>                     
+  4 S7<6>                            26 BCDOut<3>                     
+  5 TIE                              27 BCDOut<4>                     
+  6 TIE                              28 BCDOut<5>                     
+  7 TIE                              29 BCDOut<6>                     
+  8 TIE                              30 TDO                           
+  9 TIE                              31 GND                           
+ 10 GND                              32 VCC                           
+ 11 TIE                              33 TIE                           
+ 12 TIE                              34 TIE                           
+ 13 TIE                              35 TIE                           
+ 14 TIE                              36 Anode_1                       
+ 15 TDI                              37 Anode_10                      
+ 16 TMS                              38 S7<0>                         
+ 17 TCK                              39 TIE                           
+ 18 TIE                              40 TIE                           
+ 19 TIE                              41 VCC                           
+ 20 TIE                              42 TIE                           
+ 21 VCC                              43 S7<1>                         
+ 22 BCDOut<0>                        44 S7<2>                         
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+ ```
