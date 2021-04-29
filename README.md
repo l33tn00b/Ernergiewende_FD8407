@@ -99,6 +99,8 @@ Pinout am uC:
 
 Im Keller liegen noch einige 5V CPLDs von Xilinx (XC9536). Da lässt sich sicher was machen. Und die gute alte ISE gibts auch als virtuelle Maschine für Windows. Das Ding scheint allerdings nicht so richtig durchdacht. Also verbringen wir erstmal einige Zeit mit Fehlersuche beim Floor Planning für den CPLD (pace-tool lässt sich nicht starten. Bei click auf den Punkt in der ISE passiert einfach nix).
 
+Pace liegt im Pfad ``/opt/Xilinx/14.7/ISE_DS/bin/lin64``, Name der ausführbaren Datei ist ``pace_old``. 
+
 Uff, was für ein Linux läuft denn da in der VM?
 ```
 [ise@localhost ISE_DS]$ lsb_release -a
@@ -110,6 +112,7 @@ Codename:	n/a
 ```
 
 - http://svenand.blogdrives.com/comments?id=59 (``export DISPLAY=:0`` ) in ``/opt/Xilinx/14.7/ISE_DS/settings64.sh `` 
+- https://forums.xilinx.com/t5/FPGA-Configuration/Xilinx-issues-on-Linux/td-p/194576 (generell hilfreich)
 - https://www.philipzucker.com/install-webpack-ise-14-7-ubuntu-spartan-ax309-fpga-board/ (Fonts installieren)
   - System -> Administration -> Add/Remove Software
   - Das Root Passwort ist ``xilinx``
