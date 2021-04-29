@@ -109,8 +109,9 @@ Release:	6.4
 Codename:	n/a
 ```
 
-- http://svenand.blogdrives.com/comments?id=59 (``export DISPLAY=:0`` )
+- http://svenand.blogdrives.com/comments?id=59 (``export DISPLAY=:0`` ) in ``/opt/Xilinx/14.7/ISE_DS/settings64.sh `` 
 - https://www.philipzucker.com/install-webpack-ise-14-7-ubuntu-spartan-ax309-fpga-board/ (Fonts installieren)
   - System -> Administration -> Add/Remove Software
   - Das Root Passwort ist ``xilinx``
-  -
+  - Eigentlich hängt die VM nicht im Netz, aber da wir eh' Software laden, können wir auch ein Sicherheitsupdate fahren: Klappt nicht.
+  - 
