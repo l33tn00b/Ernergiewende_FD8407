@@ -118,6 +118,13 @@ Codename:	n/a
   - Das Root Passwort ist ``xilinx``
   - Eigentlich hängt die VM nicht im Netz, aber da wir eh' Software laden, können wir auch ein Sicherheitsupdate fahren: Klappt nicht.
  
+ Am Ende scheitere ich noch immer (hat jemand US-UTF Fonts?):
+ ```
+ [ise@localhost lin64]$ pace_old
+Wind/U Error (193): X-Resource: DefaultGUIFontSpec (-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-2) does not fully specify a font set for this locale
+Segmentation fault (core dumped)
+```
+ 
  Nach zwei Stunden kommt der Punkt wo ich einfach sagen muss "leckt mich". Also eine ebenfalls uralte CD im Keller ausgebuddelt mit einer ISE6.1 für native Windows. Prima: CPLD, Virtex2/3 Spartan 2/3 alles da :)
  
  Xilinx Environment Variable auf ``c:\Xilinx`` in einer DOS-Box von Hand gesetzt und ``c:\xilinx\bin\nt\pace.exe`` gestartet. Haha... Das gute alte Ding, ich habs vermisst.
