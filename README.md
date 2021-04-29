@@ -99,5 +99,16 @@ Pinout am uC:
 
 Im Keller liegen noch einige 5V CPLDs von Xilinx (XC9536). Da lässt sich sicher was machen. Und die gute alte ISE gibts auch als virtuelle Maschine für Windows. Das Ding scheint allerdings nicht so richtig durchdacht. Also verbringen wir erstmal einige Zeit mit Fehlersuche beim Floor Planning für den CPLD (pace-tool lässt sich nicht starten. Bei click auf den Punkt in der ISE passiert einfach nix).
 
+Uff, was für ein Linux läuft denn da in der VM?
+```
+[ise@localhost ISE_DS]$ lsb_release -a
+LSB Version:	:base-4.0-amd64:base-4.0-noarch:core-4.0-amd64:core-4.0-noarch:graphics-4.0-amd64:graphics-4.0-noarch:printing-4.0-amd64:printing-4.0-noarch
+Distributor ID:	OracleServer
+Description:	Oracle Linux Server release 6.4
+Release:	6.4
+Codename:	n/a
+```
+
 - http://svenand.blogdrives.com/comments?id=59 (``export DISPLAY=:0`` )
 - https://www.philipzucker.com/install-webpack-ise-14-7-ubuntu-spartan-ax309-fpga-board/ (Fonts installieren)
+  - System -> Administration -> Add/Remove Software
