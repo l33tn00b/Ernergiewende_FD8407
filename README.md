@@ -112,3 +112,5 @@ Codename:	n/a
 - http://svenand.blogdrives.com/comments?id=59 (``export DISPLAY=:0`` )
 - https://www.philipzucker.com/install-webpack-ise-14-7-ubuntu-spartan-ax309-fpga-board/ (Fonts installieren)
   - System -> Administration -> Add/Remove Software
+  - Das Root Passwort ist ``xilinx``
+  -
