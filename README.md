@@ -3,7 +3,7 @@ Meine kleine Enwegiewende mit Kühlschrank
 
 # Motivation
 
-Vorsicht Netzspannung!  
+Vorsicht Netzspannung! Kühlschrank vor Experimenten aus der Steckdose ziehen.
 
 Da hat man einen Carport und Platz für Solarzellen. Nun gut, prima für die Elektrokarre. Aber halt, die steht ja wenn die Sonne scheint auf dem Parkplatz auf Arbeit... Also hat sich die Industrie ausgedacht, dass man ja einen teuren Batteriespeicher kaufen kann. Die Kosten kriegt man nur seeehr selten wieder rein. Momentan ist das eher noch eine ideologisch motivierte Kaufentscheidung.
 
@@ -60,6 +60,8 @@ Unterseite:
 ![Platine Unterseite](platine_bot.jpg)
 
 Stecker 2,54mm Raster zur Anbindung an die Leistungselektronik und die Sensoren. Vorsicht: der weiße Draht im achtpoligen Stecker führt Netzspannung (Türschalter). Um unnötige spannende (haha) Momente zu vermeiden rate ich zu "Finger weg..." und entsprechenden Schutzmaßnahmen.
+
+![Weißes Kabel mit Netzspannung](kabel_230V.jpg)
 
 Bei der Super-Taste sagt die Bedienungsanleitung, dass sich die Funktion irgendwann selbst wieder deaktiviert, wenn das neu eingelegte Zeugs im TK-Bereich durchgefroren ist. Ich tippe auf eine Auswertung des Temperaturgradienten, um den Punkt mitzukriegen. Anderenfalls deaktiviert sie sich spätestens nach einem Tag wieder. Hm. Kein neues Zeug im TK-Bereich führt wahrscheinlich dazu, dass sich die Funktion ziemlich bald wieder deaktiviert. Man kann es aber mal probieren.   
 - Vorteil: Zeug im Kühlbereich friert nicht ein, die Temperatur dort bleibt gleich. Schnell zu aktivieren, ein Taster mit Optokoppler brücken. Auswertung ob aktiviert oder nicht ist auch einfach, da es eine LED dafür gibt. Lässt sich ebenfalls mit Optokoppler gut auswerten. Ein Input, ein Output am Controller. Da reicht was echt kleines (z.B. ESP-01). Optokoppler sind Cent-Bausteine. Plus einen Vorwiderstand für den Optokopper. EspEasy auf den Controller, das wars. 
