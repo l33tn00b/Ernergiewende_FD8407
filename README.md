@@ -122,6 +122,11 @@ Codename:	n/a
  
  Xilinx Environment Variable auf ``c:\Xilinx`` in einer DOS-Box von Hand gesetzt und ``c:\xilinx\bin\nt\pace.exe`` gestartet. Haha... Das gute alte Ding, ich habs vermisst.
  
+ ![Screenshot PACE, Auswahl Dateien und Device](screenshot_pace.png)
+ 
+ ![Screenshot PACE, Main Screen](screenshot_pace_2.png)
+ 
+ 
  Alternativ gibts da noch Lösungen mit Docker, die wohl ansatzweise funktionieren?
  - https://github.com/zberkes/XilinxISE-Docker
  - http://homepages.hs-bremen.de/~jbredereke/en/software/xilinx-docker/index.html
