@@ -93,3 +93,11 @@ Pinout am uC:
 - uc_29: Uln_in1
 - uc_35: Anode Zehnerstelle ("b") via Transistortreiber
 - uc_37: Anode Einerstelle ("e") via Transistortreiber
+
+
+## Wir basteln uns ein Interface mit CPLD
+
+Im Keller liegen noch einige 5V CPLDs von Xilinx (XC9536). Da lässt sich sicher was machen. Und die gute alte ISE gibts auch als virtuelle Maschine für Windows. Das Ding scheint allerdings nicht so richtig durchdacht. Also verbringen wir erstmal einige Zeit mit Fehlersuche beim Floor Planning für den CPLD (pace-tool lässt sich nicht starten. Bei click auf den Punkt in der ISE passiert einfach nix).
+
+- http://svenand.blogdrives.com/comments?id=59 (``export DISPLAY=:0`` )
+- https://www.philipzucker.com/install-webpack-ise-14-7-ubuntu-spartan-ax309-fpga-board/ (Fonts installieren)
