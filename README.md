@@ -203,6 +203,6 @@ Legend :  NC  = Not Connected, unbonded pin
   PROHIBITED  = User reserved pin
  ```
 
-Zwischenzeitlich habe ich auch die Chips gefunden und eine Demo-Platine, die ich irgenwann mal (Usenet de.sci.ing.elektrotechnik lässt grüßen) von jemandem geätzt bekommen habe. Nicht schön, aber selten und hat einen JTAG Programmierheader, den ich damals über einen Parallelport-Adapter angesteuert habe. Jetzt habe ich einen Digilent HS-3, das Ding ist kleiner als die Demo-Platine und kein Vergleich mit den ollen Xilinx-Originalen von damals. 
+Zwischenzeitlich habe ich auch die Chips gefunden und eine Demo-Platine, die ich irgenwann mal (Usenet de.sci.ing.elektrotechnik lässt grüßen, https://www.holger-klabunde.de/projects/Xilinx.htm) von jemandem geätzt bekommen habe. Nicht schön, aber selten und hat einen JTAG Programmierheader, den ich damals über einen Parallelport-Adapter angesteuert habe. Jetzt habe ich einen Digilent HS-3, das Ding ist kleiner als die Demo-Platine und kein Vergleich mit den ollen Xilinx-Originalen von damals. 
 
 ![XC9536 Demo Platine](xc9536_demo.jpg)
