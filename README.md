@@ -117,4 +117,12 @@ Codename:	n/a
   - System -> Administration -> Add/Remove Software
   - Das Root Passwort ist ``xilinx``
   - Eigentlich hängt die VM nicht im Netz, aber da wir eh' Software laden, können wir auch ein Sicherheitsupdate fahren: Klappt nicht.
-  - 
+ 
+ Nach zwei Stunden kommt der Punkt wo ich einfach sagen muss "leckt mich". Also eine ebenfalls uralte CD im Keller ausgebuddelt mit einer ISE6.1 für native Windows. Prima: CPLD, Virtex2/3 Spartan 2/3 alles da :)
+ 
+ Alternativ gibts da noch Lösungen mit Docker, die wohl ansatzweise funktionieren?
+ - https://github.com/zberkes/XilinxISE-Docker
+ - http://homepages.hs-bremen.de/~jbredereke/en/software/xilinx-docker/index.html
+
+
+ 
