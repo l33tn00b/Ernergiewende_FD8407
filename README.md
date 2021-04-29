@@ -120,6 +120,8 @@ Codename:	n/a
  
  Nach zwei Stunden kommt der Punkt wo ich einfach sagen muss "leckt mich". Also eine ebenfalls uralte CD im Keller ausgebuddelt mit einer ISE6.1 für native Windows. Prima: CPLD, Virtex2/3 Spartan 2/3 alles da :)
  
+ Xilinx Environment Variable auf ``c:\Xilinx`` in einer DOS-Box von Hand gesetzt und ``c:\xilinx\bin\nt\pace.exe`` gestartet. Haha... Das gute alte Ding, ich habs vermisst.
+ 
  Alternativ gibts da noch Lösungen mit Docker, die wohl ansatzweise funktionieren?
  - https://github.com/zberkes/XilinxISE-Docker
  - http://homepages.hs-bremen.de/~jbredereke/en/software/xilinx-docker/index.html
